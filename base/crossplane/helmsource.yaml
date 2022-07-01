@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: crossplane-stable
-  namespace: default
+  namespace: ubs-sc-az-aks-management
 spec:
   interval: 5m0s
   url: https://charts.crossplane.io/stable
