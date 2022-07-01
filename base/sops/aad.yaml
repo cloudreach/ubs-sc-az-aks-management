@@ -1,0 +1,18 @@
+---
+apiVersion: aadpodidentity.k8s.io/v1
+kind: AzureIdentity
+metadata:
+  name: sops-akv-decryptor  # kustomize-controller label will match this name
+  namespace: flux-system
+spec:
+  clientID: 265bb7df-4af7-4e1e-bc76-44d0c3b85046
+  resourceID: /subscriptions/f2b2f235-9a0c-41a8-b92d-ae7ba8472f6a/resourcegroups/gitops-management/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sops-akv-decryptor
+  type: 0
+---
+apiVersion: aadpodidentity.k8s.io/v1
+kind: AzureIdentityBinding
+metadata:
+  name: sops-akv-decryptor-binding
+spec:
+  azureIdentity: sops-akv-decryptor
+  selector: sops-akv-decryptor
