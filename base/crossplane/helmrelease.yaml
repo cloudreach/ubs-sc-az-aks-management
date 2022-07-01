@@ -12,5 +12,5 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: crossplane-stable
-        namespace: default
+        namespace: ubs-sc-az-aks-management
       interval: 1m
